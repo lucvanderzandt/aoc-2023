@@ -13,7 +13,7 @@ Advent of Code is an Advent calendar of small programming puzzles for a variety 
 Learn more about Advent of Code [here](https://adventofcode.com/).
 
 ## Folder Structure
-- `src/`
+- `src/test/kotlin`
     - `days/`: Solutions for each day
     - `input/`: Input files for each day
     - `utils/`: Utility functions used across multiple days
