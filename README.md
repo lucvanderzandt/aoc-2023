@@ -15,5 +15,5 @@ Learn more about Advent of Code [here](https://adventofcode.com/).
 ## Folder Structure
 - `src/test/kotlin`
     - `days/`: Solutions for each day
-    - `input/`: Input files for each day
     - `utils/`: Utility functions used across multiple days
+- `src/test/resources` (checked out): The input files for each day
