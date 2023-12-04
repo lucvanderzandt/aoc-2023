@@ -1,12 +1,11 @@
 package days
 
-import org.junit.jupiter.api.DisplayName
 import utils.FileReader
 import kotlin.test.Test
 
 class Day01 {
-    private val data: List<String> = FileReader.asStrings("day-01.txt")
-    private val digitMapping: Map<String, Int> = mapOf(
+    private val data = FileReader.asStrings("day-01.txt")
+    private val digitMapping = mapOf(
         "one" to 1,
         "two" to 2,
         "three" to 3,
@@ -28,22 +27,20 @@ class Day01 {
     )
 
     @Test
-    @DisplayName("Part 1")
-    fun part1() {
-        val values: MutableList<Int> = mutableListOf()
-
-        for (string in data) {
-            val value = string.filter(Char::isDigit)
-            values.add((value.first().toString() + value.last().toString()).toInt())
+    fun `Part 1`() {
+        val values = data.map {string ->
+            string.filter(Char::isDigit)
+                .let {
+                    (it.first().toString() + it.last().toString()).toInt()
+                }
         }
 
         println("Answer part 1: " + values.sum())
     }
 
     @Test
-    @DisplayName("Part 2")
-    fun part2() {
-        val values: MutableList<Int> = mutableListOf()
+    fun `Part 2`() {
+        val values = mutableListOf<Int>()
 
         for (string in data) {
             var first: Int? = null
